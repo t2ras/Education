@@ -1,0 +1,162 @@
+Function
+
+Определение функции:
+var Function print(){                //Функцию можно загнать в переменную и к ней обращаться как через функцию, так и через переменныю
+	return x*x
+}
+
+Вызов:
+console.log(print(4));      //вернет 4*4
+Function print(x){
+	Function square(x){return x*x}
+	return math.sqrt(sqrt(a)+square(l));       //вырнет корень квадратный из квадрат(а)+квадрат(b)
+}
+
+Вызов:
+print(5,4);
+print()();  //чтобы обратиться к вложенной функции
+
+
+Способы вызова функции:
+1) Вызов как функции:
+							myfunc;
+							myfunc();
+							myfunc(a);
+							myfunc({a:2});
+2) Вызов как метода:
+							var calculator{
+								operand:1,
+								operand:2,
+								add: Function(){
+									this.result=this.operand1+this.operand2;
+								}
+							}
+		Вывод значения на экран:
+		calculator.result;
+		calculator.add();  // просто вызов функции
+3) Вызов как коснтруктор:
+							var o= new Function();
+							var o= new Function('x','y','return x*y'); // 'x' 'y'входящие параметры 'return x*y' возврат
+4) Call и applay
+						var o={
+							operand1:1;
+							operand2:2;
+						}
+Вызов функции
+ 				f.call(o);
+
+ ----------------------------Аргументы функции:
+Function f(x){
+	print(x);           //например х=12
+	arguments[0]=null;
+	print(x);             //null
+}
+Внутри функции можно определять свойства или обращаться к свойствам:
+		function uniqueInt(){
+			return uniqueInt.counter ++; // функция возвращает число
+		}
+unique.counter=0;
+
+
+-------------------------Замыкание функции
+
+var scope='global';
+function check(){
+	var scope='local';    //значение скоуп меняется на локал
+		function f(){return scope};
+		return f;
+}
+
+Если вызвать функцию check(); на вызоде будет local
+Внутренняя функция наследует все переменные внешней 
+Пример счетчика:
+				function counter(){
+					var n=0;
+					return {
+						count: function(){return n++;},
+						reset: function(){n=0;}
+					}
+				} 
+var c=counter(); d=counter();
+Вызов:
+		c.count()   //вернет 0+1
+		d.count()   //вернет 0+1
+		c.reset()   //0
+		c.count()   //будет наращивание с 0
+		d.count()   //будет продолжаться наращивание потому что мы ничего не обнуляли
+
+
+Метод связывания функции с объектом BIND
+
+function x(y){
+	return this.x+y
+}
+
+
+var o= {x:1};
+var q= x.bind(o);  // через bind функцию связали с объктом
+q(2)
+
+
+Новый метода
+
+var sum= function(x,y) {return x+y}
+var data=[1,2,5,2,1];
+       Нужно вывести среднюю для массива:
+var dev= data.reduce(sum)/data.length; //Иначе пришлось все делать через цикл
+
+Функция высшего порядка когда функция примимает параметром другую функцию:
+
+function not(f){
+	return function(){
+		var result=f.apply(this,arguments);
+		return !result;
+	}
+}
+
+var even= function (x){
+	return x%2==0; 
+}
+
+var add=not(even);
+
+[1,1,3,5,5].every(add); //будет возвращен true т.к. все элементы массива нечетные																
+Классы определяются в jS через функции:
+
+function RangeMy(from,to){
+	this.from=from;              //это свойства для прототипа
+	this.to=to;
+}
+Range.My.prototype={
+	includes:function(x){this.to+this.from},
+	mynethed.function(y){},
+}
+
+Класс в jS определяется:
+// 1) Прописываем функцияю
+// 2) Prototype
+// 3) Констурктор в функции принимает параметры, котрые будут использоваться для записи параметров туда
+ Чтобы использовать класс:
+var myf=new RangeMy(1,3);
+// и через эту переменную мы можем вызывать методы котрые есть в прототипе:
+myf.includes(2)
+Range.My.prototype.myfunc=function(){
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

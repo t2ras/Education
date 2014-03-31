@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Название</title>
+		<meta charset='utf-8'>
+		<meta name='description' content='1-2-3'>
+		<!-- <link type='text/css' href='Media/style_form.css' rel='stylesheet'> -->
+    	<script type='text/javascript' src='Media/script_check_form.js'></script>
+	</head>
+<body>
+	<section> <!--вместо тега div в html изпользуется в html5 -->
+		<form name='information' method='post'>
+			<label for='nickname'>
+				login:
+			</label>
+			<input pattern='[A-Za-z]{3,20}' name='nickname' id='nickname' required>
+			<label for='email'>
+				e-mail:
+			</label>
+			<input type='email' name='email' id='email' required>
+			<input type='button' id='send' value='Вход'>
+		</form>   
+	</section>
+</body>
+	

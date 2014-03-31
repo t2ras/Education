@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Мой сайт</title>
+	<meta charset='UTF-8'>
+    <link type='text/css' href='Media/style_form.css' rel='stylesheet'>
+    <script type='text/javascript' src='Media/script_form.js'></script>
+</head>
+<body>
+<!--Форма-->
+<form class='msform' id='msidform' method='post' action='node.js'>
+
+<form class='msform' name='myform'> <!-- ame='myform' для свзывания формы с элементом вне формы-->
+	<p>
+	   <label for='FIO'>FIO</label><br>          <!--описание для input-->
+	   <input type='text' name='FIO' id='firstname'/>
+    </p>
+    <p>
+       <label for='lastname'>LastName</label><br>          <!--описание для input-->
+       <input type='text' name='lastname' id='lastname'/>
+    </p>
+    <p>
+       <label for='about'> Подробнее о себе</label><br>
+       <textarea name='about' oninput='validateComments(this)' id='comments'></textarea>
+    </p>
+    <p>
+    	<label for='e-mail'>E-mail:</label>
+    	<input type='email' name='e-mail' required multiply><!--equired обязательныый форма для заполнения multiply для введения нескольких email-->
+    </p>
+    <p>
+    	<label for='poisk'>Search:</label>
+    	<input type='search' name='poisk' autocomplete='off' pattern='[A-Z]{3}-[0-9]{3}'>  <!--будет добавлять крестик для отмены написанного.  Autocomplete='off' отключает подсказки браузера для формы, которые мы вводили ранее где-то-->
+    </p>
+    <p>
+    	<label for='poisk' form='myform'>Search:</label>
+    	<form method='post' name='myform'> 
+    </p>
+    <p>
+    	<label for='url'>Site adress</label>
+    	<input type='url' name='url'>
+    </p>
+     <p>
+    	<label for='phone'>Phone</label>
+    	<input type='tel' name='phone' placeholder='+37529334455' list='mydate'><!-- laceholder Подсказка формата для формы-->
+    </p>
+    <p>
+    	<label for='year'>Number</label>
+    	<input type='number' name='year' min='10' max='100' step='1'>
+    </p>
+    <p>
+    	<label for='mynumber'>MyNumber</label>
+    	<input type='range' name='mynumbers' min='0' max='10' step='2'>
+    </p>
+    <p>
+    	<label for='phone'>Date</label>
+    	<input type='date' name=''>   <!---type: 'time' 'datetime' 'datetime-local' 'month' 'week'. Есть плагин datepicker для jquery позволяет производить сложный выбор даты-->
+    </p>
+    <p>
+    	<label for='col'>Color</label>   <!--- Прогресс заполнения большой формы-->
+    	<input type='color' name='col'>
+    </p>
+    <progress max='100' value='75'>
+    	Текст
+    </progress><br>
+    <meter min='0' max='100' low='40' high='90' optimum='50' value='90'> Text</meter> <!--для измерения данных в пределах заданного диапазона-->
+    <p>
+    	<input type='submit' value='send'>
+    </p>
+    <p>
+    	<input type='submit' value='save' formnovalidate> <!--formnovalidate для отмены проверки правильности введения e-mail или еще чего-нибудь в форме-->
+    </p>
+    <datalist id='mydate'>
+    	<option value='1212232' lavel='Phone1'></option>
+    	<option value='1212232' lavel='Phone2'></option>
+    </datelist>
+    <p contenteditable>
+    	Текст
+    </p>
+    J
+    name1=document.getElementById('mid');
+    val=name1.addEventListener('click' function(){})
+
+
+</form> 
+</body>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Название</title>
+		<meta charset='utf-8'>
+		<meta name='description' content='1-2-3'>
+		<link type='text/css' href='Media/Video.css' rel='stylesheet'>
+    	<script type='text/javascript' src='Media/Video.js'></script>
+	</head>
+<body>
+	<section id="player"> 
+		<!--<video src="/Users/t2ras/Movies/Mul'ti/ipod/1.mp4" width="720px" height="400px" id="media"></video>  -->
+		<video width="720px" height="400px" id="media" poster="/Users/t2ras/Downloads/Index.jpg">  
+		<source src="/Users/t2ras/Downloads/Lonely_Boy.webm">
+		</video>
+		<!--Проверка подддерживает ли видео poster='.jpg' -будет картинка выводиться
+		width= height= 
+		preload=none
+		preload=metadata указывает браузеру, что нужно загрзить чтобы показать высоту
+		preload=auto  браузер сам решает сколько нужно загружать
+		булевые аттрибуты:
+		autoplay видео начинает проигрываться при переходе
+		loop    нужно ли повторно проигрывать видео как только оно достигло конца
+		muted   нужно ли запускать видео с выкл. звуком
+ 		-->
+ 		<!--События(относится к тэгу video) для видео в jS: 
+		progress информируют о прогрессе загрузки
+		conplaythrought
+		conplay
+		ended cрабатывает когда видео заканчивается
+		pause cрабатывает когда видео на паузу стаится
+		error  cрабатывает когда видео выпадает в ошибку. Только для source
+		Методы(относится к тэгу video и методами мы управляем видео):
+		play попытвает загрузить и воспроизвести видео
+		pause останаввливает видео
+		canplaytype распознает какие кодеки поддерживает браузер. Бразер должен отвтеть probably, maybe(попытаюсь) и no - не воспроизведу
+		load предназначен для загрузки другого видео
+		Свойства лишь возращают информацию:
+		pause 
+		ended возврвщает true если видео было воспроизведено до конца
+		duration возвращает продолжительность в секундах
+		currenTime
+		error
+		buffered  возвращает сколько было загружено в буффер
+ 		-->
+
+		<!--- Чтобы поддерживался всеми браузерами:	
+		<video controls>
+		<source src="/Users/t2ras/Movies/Mul'ti/ipod/Проклятие.mp4">
+		<source src="/Users/t2ras/Movies/Mul'ti/ipod/Проклятие.ogg">
+		<source src="/Users/t2ras/Movies/Mul'ti/ipod/Проклятие.webm">
+		</video> -->
+			<nav>  <!--тэг,содержаший только навигацию, появился в html5 -->
+			<div id="buttons">         
+				<input type="button" id='play' value="Play">
+				<input type="button" id='mute' value="Mute">
+			</div>
+			<div id="bar">         
+				<div id="progress"></div>
+			</div>  
+			<div id="control">         
+				<input type="range" id='volume' min=0 max=1 value="0.6" step="0.1">
+			</div> 
+			<div class="clear"></div>
+			</nav>
+	</section>
+</body>

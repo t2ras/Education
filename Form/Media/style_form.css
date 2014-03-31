@@ -1,0 +1,18 @@
+input:valid{
+	background: lightgreen;
+}
+input:invalid{
+	background: red;
+}
+input:required{
+border:solid 2px gold;
+}
+input:option{
+border:solid 2px lightgreen;
+}
+input:out-of-range{
+background: white;
+}
+input:in-range{
+background: green;
+}

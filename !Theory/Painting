@@ -1,0 +1,31 @@
+// прямоугольники  x и y считается относительно canvas
+// fillRect(x,y,width,height)  залит черным цветом
+// strokeRect(x,y,width,height)  не  залит черным цветом прямоугольник
+// clearRect(x,y,width,height) стирает область нарисованную
+// strokeStyle
+// fillStyle
+//Градиенты
+// createLinearGradient(x1,y1,x2,y2); создает объект для последующей реализации градиента
+// addColorStop(position,color);  position от 0.0 до 1.0  - затухание цвета
+// createRadiusGradient(x1,y1,x2,y2); только с
+// Методы для создания путей:
+// beginPath()
+// closePath()
+// stroke() визуализируем объект в виде контура
+// flip() закрывает фигуру и заливает цветом
+// clip() маска которая накладывается поверх 
+// Методы для создания фигуры
+// moveTo(x,y) позиция с которой начинается линия
+// lineTo(x,y)
+// rect(x,y,width,height)
+// arc(x,y,radius,startAngle,endAngle,direction) риисует дуги
+// quadraticCurveTo(cpx,cpu,x,y) линия без Е
+// Параметры линни
+// lineWidth  толщина
+// lineCap окончание линии round square butt
+// lineJoin соединение двух линий
+// Изображения
+// drowImage(/image,x,y) вставить изображение и куда
+// drowImage(/image,x,y,width,height) вставить изображение определенного размера
+// drowImage(/image,x1,y1,width1,height1,x2,y2,width2,height2) Втсавили обрезали и Изменить размер
+// !!!Библиотека для рисовани ArtisanJs
